@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
+  before_action :set_blog, only: %i[show edit update destroy]
 
-  def  index
+  def index
     @blogs = Blog.all
   end
 
@@ -47,6 +48,10 @@ class BlogsController < ApplicationController
   end
 
   private
+
+  def set_blog
+    @blog = Blog.find(params[:id])
+  end
 
   def blog_params
     params.require(:blog).permit(:title, :content)
