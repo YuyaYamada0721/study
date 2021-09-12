@@ -6,4 +6,7 @@
 <% @blogs.each do |blog| %>
   <%= blog.title %>
   <%= blog.content %>
+  <%= link_to '詳細', blog_path(blog) %>
+  <%= link_to '編集', edit_blog_path(blog) %>
+  <%= link_to '削除', blog_path(blog), method: :delete, data: { confirm: '削除しますか？' } %>
 <% end %>

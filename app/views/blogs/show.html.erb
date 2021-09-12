@@ -1,6 +1,8 @@
-<h1>ブログ新規投稿</h1>
+<h1>ブログ詳細</h1>
 
-<%= render 'form', blog: @blog %>
+<%= @blog.title %>
+<%= @blog.content %>
 
 <hr>
+
 <%= link_to '一覧画面へ戻る', blogs_path, class: 'btn btn-secondary' %>
