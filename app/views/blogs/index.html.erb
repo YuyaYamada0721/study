@@ -1,0 +1,9 @@
+<h1>みんなのブログ一覧</h1>
+<%= link_to 'ブログを投稿する', new_blog_path, class: 'btn btn-info' %>
+
+<hr>
+
+<% @blogs.each do |blog| %>
+  <%= blog.title %>
+  <%= blog.content %>
+<% end %>
