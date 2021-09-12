@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   root 'blogs#index'
 
+  resources :users, only: :show
   resources :blogs
 end
