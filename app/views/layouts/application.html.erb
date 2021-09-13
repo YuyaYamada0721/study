@@ -11,6 +11,9 @@
   </head>
 
   <body>
+
+<%= render 'shared/layout/header' %>
+
     <div class="container">
       <% if user_signed_in? %>
         <%= link_to "マイページ", user_path(current_user) %>
