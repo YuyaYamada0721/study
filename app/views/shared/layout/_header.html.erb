@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">ロゴ</a>
+    <a class="navbar-brand" href="top">Coffee Time</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,8 +17,13 @@
             ドロップダウン
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">リンク３</a></li>
-            <li><a class="dropdown-item" href="#">リンク４</a></li>
+            <% if user_signed_in? %>
+              <li><%= link_to "マイページ", user_path(current_user), class: 'dropdown-item' %></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'dropdown-item' %></li>
+            <% else %>
+              <li><%= link_to "新規登録", new_user_registration_path, class: 'dropdown-item' %></li>
+              <li><%= link_to "ログイン", new_user_session_path, class: 'dropdown-item' %></li>
+            <% end %>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">リンク５</a></li>
           </ul>

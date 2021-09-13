@@ -3,10 +3,17 @@
 
 <hr>
 
-<% @blogs.each do |blog| %>
-  <%= blog.title %>
-  <%= blog.content %>
-  <%= link_to '詳細', blog_path(blog) %>
-  <%= link_to '編集', edit_blog_path(blog) %>
-  <%= link_to '削除', blog_path(blog), method: :delete, data: { confirm: '削除しますか？' } %>
-<% end %>
+<table class="table">
+  <tr>
+    <th>Coffee Info</th>
+  </tr>
+  <% @blogs.each do |blog| %>
+  <tr>
+    <td><%= blog.title %></td>
+    <td><%= blog.content %></td>
+    <td><%= link_to '詳細', blog_path(blog) %></td>
+    <td><%= link_to '編集', edit_blog_path(blog) %></td>
+    <td><%= link_to '削除', blog_path(blog), method: :delete, data: { confirm: '削除しますか？' } %></td>
+  </tr>
+  <% end %>
+</table>
