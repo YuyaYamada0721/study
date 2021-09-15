@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   root 'blogs#index'
 
   resources :users, only: :show
-  resources :blogs
+  resources :blogs do
+    resources :favorites, controller: 'blogs/favorites', only: %i[create destroy]
+  end
 end

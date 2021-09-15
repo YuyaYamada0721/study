@@ -5,4 +5,10 @@
 
 <hr>
 
+<% if Favorite.find_by(user_id: current_user.id, blog_id: @blog.id) %>
+  <%= link_to 'お気に入り削除', blog_favorite_path(@blog), method: :delete %>
+<% else %>
+  <%= link_to 'お気に入り追加', blog_favorites_path(@blog), method: :post %>
+<% end %>
+
 <%= link_to '一覧画面へ戻る', blogs_path, class: 'btn btn-secondary' %>
