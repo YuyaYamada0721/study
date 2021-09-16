@@ -5,6 +5,16 @@
 
 <hr>
 
+<p>コメント一覧</p>
+
+<div id="comments_area">
+  <%= render partial: 'blogs/comments/index', locals: { comments: @comments, blog: @blog } %>
+</div>
+
+<%= render partial: 'blogs/comments/form', locals: { comment: @comment, blog: @blog } %>
+
+<hr>
+
 <% if Favorite.find_by(user_id: current_user.id, blog_id: @blog.id) %>
   <%= link_to 'お気に入り削除', blog_favorite_path(@blog), method: :delete %>
 <% else %>
