@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :users, only: :show
   resources :blogs do
+    resources :comments, controller: 'blogs/comments'
     resources :favorites, controller: 'blogs/favorites', only: %i[create destroy]
   end
 end
