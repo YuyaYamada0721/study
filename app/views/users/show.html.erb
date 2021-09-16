@@ -1,5 +1,17 @@
 <h1>マイページ</h1>
 
+<h3>メールアドレス</h3>
 <%= @user.email %>
+
+<hr>
+
+<h3>お気に入り記事一覧</h3>
+<ul>
+  <% @user.favorites.each do |favorite| %>
+    <li><%= link_to favorite.blog.title, blog_path(favorite.blog.id) %></li>
+  <% end %>
+</ul>
+
+<hr>
 
 <%= link_to 'ブログ一覧へ', blogs_path %>
