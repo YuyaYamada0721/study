@@ -13,18 +13,20 @@
   <body>
 
 <%= render 'shared/layout/header' %>
-
-  <div class="container">
-    <div class="alert-space">
-      <% if notice %>
-        <p class="alert alert-info"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
+  <% unless controller.controller_name == "tops" %>
+    <div class="container">
+      <div class="alert-space">
+        <% if notice %>
+          <p class="alert alert-info"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+      </div>
+      <%= yield %>
     </div>
+  <% else %>
     <%= yield %>
-  </div>
-
+  <% end %>
   </body>
 </html>
