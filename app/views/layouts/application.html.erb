@@ -11,9 +11,10 @@
   </head>
 
   <body>
-
 <%= render 'shared/layout/header' %>
+
   <% unless controller.controller_name == "tops" %>
+
     <div class="container">
       <div class="alert-space">
         <% if notice %>
@@ -25,8 +26,12 @@
       </div>
       <%= yield %>
     </div>
+
   <% else %>
+
     <%= yield %>
+
   <% end %>
+
   </body>
 </html>

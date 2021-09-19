@@ -1,20 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container">
-    <a class="navbar-brand" href="/">Coffee Time</a>
+    <a class="navbar-brand fw-bold" href="/">Coffee Time</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">リンク</a>
+          <%# <a class="nav-link active" aria-current="page" href="#">リンク</a> %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">リンク２</a>
+          <%# <a class="nav-link" href="#">リンク２</a> %>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            ドロップダウン
+          <a class="nav-link dropdown-toggle text-black" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            MENU
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <% if user_signed_in? %>
@@ -24,8 +24,8 @@
               <li><%= link_to "新規登録", new_user_registration_path, class: 'dropdown-item' %></li>
               <li><%= link_to "ログイン", new_user_session_path, class: 'dropdown-item' %></li>
             <% end %>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">リンク５</a></li>
+            <%# <li><hr class="dropdown-divider"></li> %>
+            <%# <li><a class="dropdown-item" href="#">リンク５</a></li> %>
           </ul>
         </li>
       </ul>
