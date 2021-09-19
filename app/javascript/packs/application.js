@@ -19,7 +19,8 @@ import "../js/hoge.js"
 // - 検証用 -
 // app/javascript/images/フォルダー内の001.jpeg画像を
 // webpackerに読み込ませます。
-const images = require.context('../images', true)
+const images = require.context('../images', true);
+const imagePath = name => images(name, true);
 
 require("trix")
 require("@rails/actiontext")
