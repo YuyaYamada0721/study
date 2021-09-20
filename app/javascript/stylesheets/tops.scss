@@ -8,6 +8,38 @@
   transform: translate(-50%,-50%);
 }
 
+.top-title-content {
+  color: white;
+  font-size: 2rem;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.top-title-box .sign-in-link {
+  color: white;
+  font-size: 2rem;
+  top: 50%;
+  left: 60%;
+  text-decoration: none;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.top-title-box .sign-up-link {
+  color: white;
+  font-size: 2rem;
+  top: 50%;
+  left: 40%;
+  text-decoration: none;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
 .top-title-image {
   width: 100%;
 }
